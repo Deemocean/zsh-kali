@@ -1,18 +1,19 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-# zsh-macos
+# zsh-kali
 zsh configuration adapted for macos based on [Kali Linux](https://kali.org) [2020.3 release](https://www.kali.org/news/kali-2020-3-release/)
 
-[![zsh](https://statropy.com/img/banners/zsh-macos.png)](https://statropy.com/blog/kali-linux-zsh-for-macos/)
+<img width="670" alt="Screenshot 2023-03-06 at 1 12 55 PM" src="https://user-images.githubusercontent.com/39002684/223195389-7af66517-f8e6-4918-8470-13ca027e85ca.png">
 
-This .zshrc file uses a similar config as Kali Linux, but also includes git status with the prompt. [Read about the customizations I made.](https://statropy.com/blog/kali-linux-zsh-for-macos/)
+
+This .zshrc file uses a similar config as Kali Linux, but also includes git status with the prompt. [Read about the customizations He made.](https://statropy.com/blog/kali-linux-zsh-for-macos/)
 
 ## Install
 
-Install the [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [menlo powerline font](https://github.com/powerline/fonts) packages using [Homebrew](https://brew.sh/).
+Install the [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```
-brew install zsh-syntax-highlighting zsh-autosuggestions homebrew/cask-fonts/font-menlo-for-powerline
+brew install zsh-syntax-highlighting zsh-autosuggestions
 ```
 
 Backup the existing `.zshrc` and symlink the .zshrc file from this repo to your home directory.
@@ -20,9 +21,9 @@ Backup the existing `.zshrc` and symlink the .zshrc file from this repo to your 
 ```
 git clone https://github.com/statropy/zsh-macos.git
 mv ~/.zshrc ~/.zshrc.orig
-ln -s ./zsh-macos/.zshrc ~/.zshrc
+ln -s <path-to-your-git-clone-dir>/.zshrc ~/.zshrc
 ```
 
-In the Terminal Preferences for the selected Profile, change the font to `Menlo for Powerline`. Quit and restart Terminal.
+In the Terminal Preferences for the selected Profile, change the font to `JetBrain Mono`. Quit and restart Terminal.
 
 To add your own alias or other commands without having to edit `.zshrc`, create a `.alias` file in the home directory. The `.zshrc` file will load it if it exists.
