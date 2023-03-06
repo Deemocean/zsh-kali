@@ -1,10 +1,30 @@
 # Original source and copyright: Kali Linux and Offensive Security
 # https://www.kali.org/docs/policy/kali-linux-open-source-policy/
 
-# Modifications by Erik Larson, or otherwise attributed
+# Modifications by Erik Larson, Deemo Chen
 
 # ~/.zshrc file for zsh non-login shells.
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/deemo/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/deemo/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/deemo/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/deemo/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
+
+eval $(thefuck --alias)
+
+# opam configuration
+[[ ! -r /Users/deemo/.opam/opam-init/init.zsh ]] || source /Users/deemo/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+#----
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
@@ -108,12 +128,12 @@ if [ "$color_prompt" = yes ]; then
     RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
 
     # enable syntax-highlighting
-    if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
+    if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
 	# ksharrays breaks the plugin. This is fixed now but let's disable it in the
 	# meantime.
 	# https://github.com/zsh-users/zsh-syntax-highlighting/pull/689
 	unsetopt ksharrays
-	. /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	. /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 	ZSH_HIGHLIGHT_STYLES[default]=none
 	ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
@@ -214,8 +234,8 @@ if [ -f ~/.alias ]; then
 fi
 
 # enable auto-suggestions based on the history
-if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    . /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    . /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
