@@ -19,7 +19,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
+export TERM="xterm-256color"
 eval $(thefuck --alias)
 
 # opam configuration
@@ -239,3 +239,4 @@ if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
+

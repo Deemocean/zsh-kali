@@ -19,9 +19,9 @@ brew install zsh-syntax-highlighting zsh-autosuggestions
 Backup the existing `.zshrc` and symlink the .zshrc file from this repo to your home directory.
 
 ```
-git clone https://github.com/statropy/zsh-macos.git
+git clone https://github.com/Deemocean/zsh-kali.git
 mv ~/.zshrc ~/.zshrc.orig
-ln -s <path-to-your-git-clone-dir>/.zshrc ~/.zshrc
+ln -s <absolute-path-to-your-git-clone-dir>/.zshrc ~/.zshrc
 ```
 
 In the Terminal Preferences for the selected Profile, change the font to `JetBrain Mono`. Quit and restart Terminal.
