@@ -27,3 +27,10 @@ ln -s <absolute-path-to-your-git-clone-dir>/.zshrc ~/.zshrc
 In the Terminal Preferences for the selected Profile, change the font to `JetBrain Mono`. Quit and restart Terminal.
 
 To add your own alias or other commands without having to edit `.zshrc`, create a `.alias` file in the home directory. The `.zshrc` file will load it if it exists.
+
+
+# Use ZSH as the default shell
+
+```
+chsh -s $(which zsh)
+```
