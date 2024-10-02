@@ -13,7 +13,7 @@ This .zshrc file uses a similar config as Kali Linux, but also includes git stat
 Install the [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```
-brew install zsh-syntax-highlighting zsh-autosuggestions
+sudo apt/<whatever pkg manager> install zsh-syntax-highlighting zsh-autosuggestions
 ```
 
 Backup the existing `.zshrc` and symlink the .zshrc file from this repo to your home directory.
@@ -33,4 +33,10 @@ To add your own alias or other commands without having to edit `.zshrc`, create 
 
 ```
 chsh -s $(which zsh)
+```
+
+# Make Ctrl Z the intr key
+
+```
+stty intr ^z
 ```
